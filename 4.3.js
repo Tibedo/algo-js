@@ -12,10 +12,18 @@ function rand10(a, b) {
  
  function multiRand(n) {
 
- let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
- 
- let random = Math.round(Math.random() * arr.length);
+    let arr = []
 
- console.log(random);
-  
+    for (let i = 0; i < n; i++) {
+        
+        arr.push(rand10())
+    }
+
+return arr;
+ 
 }
+
+let ask = prompt("How much numbers would you like to display ?");
+
+
+console.log(multiRand(ask))

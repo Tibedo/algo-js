@@ -5,4 +5,4 @@ let person = {
     city : "Bruxelles",
 }
 
-console.log(person.firstname, person.name, person.age + " ans", person.city)
+console.log(person.firstname, person.name, person['age'] + " ans", person.city)

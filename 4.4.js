@@ -1,16 +1,28 @@
-
-
+let arr = ["Gilles", "Jamie", "Jason", "Leo", "Martin", "Ozcan", "Rayane", "Rayhan", "Ricardo", "Steffanie", "Sébastien", "Tanguy", "Thibaud", "Zakaria"];
 
 function pickLearner(inputAR, n) {
 
-    inputAR = ["Gilles", "Jamie", "Jason", "Leo", "Martin", "Ozcan", "Rayane", "Rayhan", "Ricardo", "Steffanie", "Sébastien", "Tanguy", "Thibaud", "Zakaria"];
-    
-    n = 0;
+    if(n > inputAR.length) {
 
-    if (n > 0 && n < inputAR.length) {
-
-    return Math.round(Math.random() * inputAR.length);
-
-    }  
-    console.log(inputAR[n]);
+    return inputAR
 }
+    let arr2 = [];
+    let copy = [...inputAR];
+     
+    for (let i = 0; i < n; i++) {
+
+        let chooseOne = Math.floor(Math.random() * (copy.length -1));
+
+        arr2.push(copy[chooseOne]);
+
+        copy.splice(chooseOne, 1);
+        
+    }
+
+    return arr2;
+}
+
+
+
+console.log(pickLearner(arr ,14))
+
